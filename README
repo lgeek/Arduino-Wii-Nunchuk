@@ -2,5 +2,12 @@ How to use:
 Copy the contents of the repository inside arduino/hardware/libraries/WiiNunchuk. Open the sketch in the "examples" 
 directory for an example. Check WiiNunchuk.h for a list of public functions.
 
+For the hardware part, the Nunchuk uses a standard i2c interface. You can find the pinout on this page: http://voidbot.net/wii-addapter.html. 
+When connected to the wiimote, it works at 3.3V (or is it just 3V?). It seems to work fine both with the 5V i2c signals from Arduino, and if powered from 5V (I'm not the only one doing this, I haven't heard of any problems yet), but this might shorten its life. If you want to be on the safe side, you could use a logic level converter like the one from SparkFun: http://www.sparkfun.com/commerce/product_info.php?products_id=8745 and supply 3.3V power. The 3.3V voltage regulator onboard Arduino seems to be just managing to give enough power and if I disconnect my Nunchuk, the board sometimes resets. Note that some of the data might get a slight offset when changing the supply voltage (we're talking about ADCs here).
 
-Arduino-Wii-Nunchuk, an Arduino library for reading data from a standard Wii Nunchuk using the TWI interface.
+
+Version 0.1.0 (January 9, 2010)
+* Another ass kicking Arduino library, this time for using the awesome Wii Nunchuk controller. First release. 
+* Now, getting technical, the Nunchuk features a two axis proportional joystick, a three axis accelerometer and two push buttons. This library allows you to get all this data, with the only mention that the two LSB on each accelerometer axis are ignored. I don't think that anyone would need 10 bit / axis precission instead of 8 bit, and this saves 3 bytes of RAM and a couple of instructions. But if anyone requests this, it can be changed in no time.
+
+The usual warning: This code works for me with my cheap non-official Nunchuk bought from eBay. If you encounter any problems, send me an email.
