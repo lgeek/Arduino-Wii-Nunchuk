@@ -1,0 +1,6 @@
+How to use:
+Copy the contents of the repository inside arduino/hardware/libraries/WiiNunchuk. Open the sketch in the "examples" 
+directory for an example. Check WiiNunchuk.h for a list of public functions.
+
+
+Arduino-Wii-Nunchuk, an Arduino library for reading data from a standard Wii Nunchuk using the TWI interface.
