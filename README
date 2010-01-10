@@ -10,4 +10,4 @@ Version 0.1.0 (January 9, 2010)
 * Another ass kicking Arduino library, this time for using the awesome Wii Nunchuk controller. First release. 
 * Now, getting technical, the Nunchuk features a two axis proportional joystick, a three axis accelerometer and two push buttons. This library allows you to get all this data, with the only mention that the two LSB on each accelerometer axis are ignored. I don't think that anyone would need 10 bit / axis precission instead of 8 bit, and this saves 3 bytes of RAM and a couple of instructions. But if anyone requests this, it can be changed in no time.
 
-The usual warning: This code works for me with my cheap non-official Nunchuk bought from eBay. If you encounter any problems, send me an email.
+The usual warning: This code works for me with my cheap unofficial Nunchuk bought from eBay. If you encounter any problems, send me an email.
